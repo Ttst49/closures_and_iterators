@@ -10,17 +10,16 @@ fn main() {
 }
 
 fn generate_exercises(intensity :u64, random_number :u64) {
+    let light_result = simulate_heavy_calc(intensity)
+
     if intensity < 25 {
-        println!("Today make {} pushups",
-                 simulate_heavy_calc(intensity));
-        println!("then, do {} abs",
-            simulate_heavy_calc(intensity));
+        println!("Today make {} pushups",light_result);
+        println!("then, do {} abs",light_result);
     }else {
         if random_number == 3 {
             println!("It's your day off today, stay hydrated");
         }else {
-            println!("Today, you have to run {} minutes",
-                simulate_heavy_calc(intensity));
+            println!("Today, you have to run {} minutes",light_result);
         }
     }
 }
