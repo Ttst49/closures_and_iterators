@@ -10,7 +10,7 @@ fn main() {
 }
 
 fn generate_exercises(intensity :u64, random_number :u64) {
-    let light_result = simulate_heavy_calc(intensity)
+    let light_result = simulate_heavy_calc(intensity);
 
     if intensity < 25 {
         println!("Today make {} pushups",light_result);
