@@ -39,3 +39,30 @@ fn generate_exercises(intensity :u64, random_number :u64) {
 }
 
 
+struct Cache<T>
+where T:Fn(u64)->u64, {
+    calc:T,
+    value: Option<u64>
+}
+
+impl<T> Cache<T>
+    where T:Fn(u64)->u64{
+
+    fn new(calc:T)->Cache<T>{
+        Cache{
+            calc,
+            value: None
+        }
+    }
+
+    fn value(&mut self, arg:u64)->u64{
+        match self.value{
+            Some(V)=>V,
+            None=>{
+                let v = (self.calc)(arg);
+                self.value = Some(v)
+            }
+        }
+    }
+
+}
