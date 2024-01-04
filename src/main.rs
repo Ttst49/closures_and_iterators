@@ -57,7 +57,7 @@ impl<T> Cache<T>
 
     fn value(&mut self, arg:u64)->u64{
         match self.value{
-            Some(V)=>V,
+            Some(v)=>v,
             None=>{
                 let v = (self.calc)(arg);
                 self.value = Some(v);
@@ -67,3 +67,16 @@ impl<T> Cache<T>
     }
 
 }
+
+//make an error because cache supposes that we use the same value
+/*
+#[test]
+fn call_cache_with_different_value() {
+    let mut c = Cache::new(|a| a);
+
+    let v1 = c.valeur(1);
+    let v2 = c.valeur(2);
+
+    assert_eq!(v2, 2);
+}
+ */
