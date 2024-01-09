@@ -1,12 +1,11 @@
 use std::thread;
 use std::time::Duration;
 
+
 fn main() {
     let simulated_user_value = 10;
     let simulated_random_number = 6;
-
     generate_exercises(simulated_user_value, simulated_random_number)
-
 }
 
 fn generate_exercises(intensity :u64, random_number :u64) {
@@ -71,7 +70,7 @@ impl<T> Cache<T>
 
 
 //make an error because cache supposes that we use the same value
-/*
+
 #[test]
 fn call_cache_with_different_value() {
     let mut c = Cache::new(|a| a);
@@ -81,4 +80,3 @@ fn call_cache_with_different_value() {
 
     assert_eq!(v2, 2);
 }
- */
