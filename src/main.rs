@@ -2,10 +2,20 @@ use std::thread;
 use std::time::Duration;
 
 
+/*
+FOR CLOSURES
 fn main() {
     let simulated_user_value = 10;
     let simulated_random_number = 6;
     generate_exercises(simulated_user_value, simulated_random_number)
+}
+ */
+
+/*
+FOR ITERATORS
+ */
+fn main() {
+    basic_iterator()
 }
 
 fn generate_exercises(intensity :u64, random_number :u64) {
@@ -70,7 +80,7 @@ impl<T> Cache<T>
 
 
 //make an error because cache supposes that we use the same value
-/**
+/*
 #[test]
 fn call_cache_with_different_value() {
     let mut c = Cache::new(|a| a);
@@ -80,4 +90,13 @@ fn call_cache_with_different_value() {
 
     assert_eq!(v2, 2);
 }
-**/
+*/
+
+
+fn basic_iterator(){
+    let vector1 = vec![12,63,93];
+    let v1_iter = vector1.iter();
+    for valor in v1_iter {
+        println!("Il y a {}",valor)
+    }
+}
