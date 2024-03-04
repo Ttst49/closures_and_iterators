@@ -18,6 +18,8 @@ fn main() {
     basic_iterator()
 }
 
+
+#[allow(unused)]
 fn generate_exercises(intensity :u64, random_number :u64) {
     let mut heavy_calc = Cache::new(|intensity:u64| ->u64{
         println!("Heavy calculating...");
